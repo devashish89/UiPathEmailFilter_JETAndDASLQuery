@@ -108,7 +108,7 @@
         </ActivityAction>
       </ui:ForEach.Body>
     </ui:ForEach>
-    <ui:GetOutlookMailMessages Account="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="DASL Query" DisplayName="Get Outlook Mail Messages" Filter="[&quot;@SQL=urn:schemas:httpmail:fromname LIKE '%Devashish Nigam%' AND urn:schemas:httpmail:subject LIKE '%test mail%' AND urn:schemas:httpmail:datereceived&gt;='&quot;+DateTime.Now.AddDays(-4).ToString+&quot;' AND urn:schemas:httpmail:hasattachment = 1&quot;]" GetAttachements="False" sap:VirtualizedContainerService.HintSize="412.666666666667,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_2" MailFolder="Inbox" MarkAsRead="False" Messages="[Emails2]" OnlyUnreadMessages="False" Top="30">
+    <ui:GetOutlookMailMessages Account="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="DASL Query" DisplayName="Get Outlook Mail Messages" Filter="[&quot;@SQL=urn:schemas:httpmail:fromname LIKE '%Devashish Nigam%' AND urn:schemas:httpmail:subject LIKE '%test mail%' AND urn:schemas:httpmail:datereceived&gt;='&quot;+DateTime.Now.AddDays(-4).ToString+&quot;' AND urn:schemas:httpmail:hasattachment = 1 AND urn:schemas:httpmail:displayto LIKE '%Devashish Nigam%'&quot;]" GetAttachements="False" sap:VirtualizedContainerService.HintSize="412.666666666667,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_2" MailFolder="Inbox" MarkAsRead="False" Messages="[Emails2]" OnlyUnreadMessages="False" Top="30">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
